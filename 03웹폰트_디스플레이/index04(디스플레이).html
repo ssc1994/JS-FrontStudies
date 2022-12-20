@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list .inner{display: inline; }         /* 인라인 요소로 변경*/
+        .list2 span {display: block; }          /* 블럭 요소로 변경*/
+        
+        .list3 a{                                /* 인라인 요소로 변경, 블럭의 성질을 가지게함*/
+            height:100px;
+            width: 100px;
+            text-align: center;
+            line-height: 100px;
+            display: inline-block; 
+        }     
+        .box{display: none;}
+
+    </style>
+</head>
+<body>
+    
+    <div class="list">
+        <div class="inner">블럭</div>
+        <div class="inner">블럭</div>
+        <div class="inner">블럭</div>
+    </div>
+
+    <div class="list2">
+        <span>인라인</span>
+        <span>인라인</span>
+        <span>인라인</span>
+    </div>
+
+    <div class="list3">
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+    </div>
+
+    <div class="box">
+        <p>디스플레이 none</p>
+        <p>디스플레이 none</p>
+        <p>디스플레이 none</p>
+    </div>
+
+</body>
+</html>
