@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .canvas{
+            overflow: hidden;
+            margin: 0 auto;
+            margin-top: 50px;
+            width: 1020px;
+            /* border: 1px solid #000; */
+        }
+        .canvas .piclist{
+            float: left;
+            box-sizing:border-box;
+            overflow: hidden;
+            border: 1px solid #000;
+            width: 480px;
+            margin: 0px 4px;
+        }
+        .canvas .piclist .pic{
+            float: left;
+            border: 1px solid #000;
+            width: 33.3333%;
+            box-sizing: border-box;
+            height: 155px;
+        }
+        .canvas .img{
+            float: left;
+            box-sizing: border-box;
+            width: 236px;
+            height: 310px;
+            border: 1px solid #000;
+            margin: 0px 4px;
+        }
+        .canvas .login{
+            float: left;
+            box-sizing: border-box;
+            margin: 0px 4px;
+            /* border: 1px solid #000; */
+            width: 280px;
+            overflow: hidden;
+        }
+        .canvas .login .top{
+            color: #777;
+            font-size:x-small;
+            margin: 50px 25px 20px;
+        }
+        .canvas .login .left{
+            float: left;
+        }
+        .canvas .login .right{
+            float: right;
+        }
+        .canvas .login .logbt{
+            margin: 0 auto;
+            margin-top: 20px;
+
+            width: 90%;
+            text-align: center;
+            padding:  10px;
+            cursor: pointer;
+        }
+        .canvas .login button:hover{
+            background-color: #17ed6d;
+            color: #fff;
+            font-weight: 900;
+            border: none;
+        }
+        .canvas .login button{
+            background-color: #19ce60;
+            color: #fff;
+            border: none;
+        }
+        .canvas .login .up{
+            height: 155px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        .canvas .login .down{
+            height: 155px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 틀 사이즈 1080px -->
+    <div class="canvas">
+        <!-- 엘범 너비 480 (33.3333%)   
+        두칸-->
+        <div class="piclist">
+            <div class="pic">사진</div>
+            <div class="pic">사진</div>
+            <div class="pic">사진</div>
+            <div class="pic">사진</div>
+            <div class="pic">사진</div>
+            <div class="pic">사진</div>
+        </div>
+        
+        <!-- 너비 236 높이 310 왼쪽마진 8 
+        한칸-->
+        <div class="img">
+            <img src="" alt="이미지영역 너비 236, 높이 310px , 왼쪽마진 8px"> 
+
+        </div>
+        
+        <!-- 너비 280 왼쪽 마진 8 
+        두칸-->
+        <div class="login">
+            <div class="up">
+                <div class="top">
+                    <span class="left">멜론을 더 안전하게 이용하세요</span>
+                    <span class="right">회원가입</span>
+                </div>
+                <div class="logbt">
+                    <button type="button" class="logbt"> 로그인</button>
+                </div>
+            </div>
+            <div class="down">  test</div>
+        </div>
+
+
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .outline {
+            border: 1px solid #000;
+            overflow: hidden;
+            width: 800px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        .outline .pic {
+            float: left;
+            box-sizing: border-box;
+            width: 50.0000%;
+        }
+
+        .outline .cont {
+            float: left;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            width: 50.0000%;
+            height: 100%;
+        }
+        .outline .title{
+            border: 1px solid #000;
+            padding-bottom: 50px;
+        }
+        
+        /* <div class ="price"> */
+        .outline .price{
+            border: 1px solid #000;
+            overflow: hidden;
+        }
+        .outline .price .left{
+            float: left;
+        }
+        .outline .price .right{
+            float: right;
+        }
+
+        /*  <div class="button"> */
+        .button {
+            overflow: hidden;
+        }
+        .button .cart {
+            border: 1px solid #000;
+            text-align: center;
+            background-color: gray;
+            width: 50%;
+            float: left;
+            box-sizing: border-box;
+            cursor: grab;
+        }
+        .button .buy {
+            border: 1px solid #000;
+            text-align: center;
+            background-color: gray;
+            width: 50%;
+            float: right;
+            box-sizing: border-box;
+            cursor:grabbing;
+        }
+    </style>
+</head>
+
+<body>
+    <H3>과제2</H3>
+
+    <div class="outline">
+        <div class="pic">
+            사진
+        </div>
+        <div class="cont">
+            <div class="title"> 
+                <h3>제목 : 패딩바텀 50px</h3>
+                <p>내용 : ~~~</p>
+            </div>
+
+            <div class="bott">
+
+                <div class="price">
+                    <div class="left">가격</div>
+                    <div class="right">10000원</div>
+                </div>
+
+                <div class="button">
+                        <button type="button" class="cart">장바구니</button>
+                        <button type="button" class="buy">구매하기</button>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
