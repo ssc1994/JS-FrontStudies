@@ -1,8 +1,7 @@
-*{margin: 0; padding: 0; list-style: none;box-sizing: border-box;}
+*{margin: 0; padding: 0; list-style: none;box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif;}
 img{max-width: 100%; height: auto;}
 .btn{border-radius: 0;}
 .detail{
-    font-family: 'Noto Sans KR', sans-serif;
     min-height: 345px;
 }
 
@@ -26,12 +25,12 @@ img{max-width: 100%; height: auto;}
 .detail-price{
     overflow: hidden;
 }
-.detail-price .left{ float: left; font-size: 18px; line-height: 45px;}
-.detail-price .right{float: right; font-size: 30px; font-weight: bold;}
+.detail-price .left{ float: left; line-height: 29px;height: 29px;}
+.detail-price .right{float: right; font-size: 20px; font-weight: bold;height: 29px;}
 
 .detail-btn{overflow: hidden;}
-.detail-btn .left{float: left; width: 50%;height: 50px}
-.detail-btn .right{float: right; width: 50%;height: 50px;}
+.detail-btn .left{float: left; width: 50%;height: 60px;font-size: 18px;}
+.detail-btn .right{float: right; width: 50%;height: 60px;font-size: 18px;}
 
 .reply_wrap{
     background-color: #f5f5f5;

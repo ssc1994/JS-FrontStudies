@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            background-color: yellow;
+            padding: 15px;
+        }
+
+        .box .item {
+            background-color: green;
+            width: 50px;
+            height: 50px;
+        }
+
+        .container {
+            /* flex 기본 item의 너비만큼 가로배치 */
+            /* flex - 블럭배치 /// inline-flex - 인라인배치 */
+            display: flex;
+            /* 주측설정  row 기본값 */
+            /* 세로 - column / 가로 - row */
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>유연한 박스</h3>
+
+    <div class="container box">
+        <div class="item">hello1</div>
+        <div class="item">hello2</div>
+        <div class="item">hello3</div>
+    </div>
+    <!-- 
+    <div class="container box">
+        <div class="item">hello1</div>
+        <div class="item">hello2</div>
+        <div class="item">hello3</div>
+    </div> -->
+
+
+    <style>
+        .box {
+            background-color: yellow;
+            padding: 15px;
+        }
+
+        .box .item {
+            background-color: green;
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+        }
+
+        .container2 {
+            display: flex;
+            /* flew-flow는 direction과 , wrap을 같이 작성하는 속성 */
+            flex-flow: row wrap;
+            /* 공간이없을때 줄바꿈처리 , 기본값 no wrap */
+            /* flex-direction: row; flex-wrap: wrap; */
+
+        }
+    </style>
+
+    <h3>flex-warp 줄바꿈</h3>
+
+    <div class="container2 box box2">
+        <div class="item">hello1</div>
+        <div class="item">hello2</div>
+        <div class="item">hello3</div>
+        <div class="item">hello3</div>
+        <div class="item">hello3</div>
+        <div class="item">hello3</div>
+        <div class="item">hello3</div>
+        <div class="item">hello3</div>
+        <div class="item">hello3</div>
+        <div class="item">hello3</div>
+        <div class="item">hello3</div>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
