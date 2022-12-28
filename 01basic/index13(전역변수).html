@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //var변수의 유효범위는 함수이다.
+        var num1 = 50;  //전역변수
+
+        if(true){
+            var num2 = 100; //전역변수 취급
+        }   
+        
+        // console.log(num2);
+        
+        console.log('-------------------------------------------');
+        
+        var num3 = 100; //전역변수
+        
+        function add(){
+            var num4 = 200; //지역변수
+        }
+        
+        // console.log(num4);
+        
+        
+        console.log('-------------------------------------------');
+        //es6 let 변수, 중괄호 스코프, 변수의 중복선언 x
+        let x1 = 100;       //전역변수
+        if(true){
+            let x2 = 200;   //지역변수
+        }
+        console.log(x2);
+
+        let x3 = 100;       //전역변수
+        function add2(){
+            let x4 = 200;   //지역변수
+        }
+        console.log(x4)
+    </script>
+
+    
+</body>
+</html>

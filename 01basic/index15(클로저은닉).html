@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //자바의 GETTER메서드
+        // function obj(){
+        //     var name = '홍길동';
+        //     return function(){
+        //         return name;
+        //     }
+        // }
+
+        // var getObj = obj();
+        // console.log(getObj());
+
+
+        //자바의 SETTER메서드
+        // function obj(){
+        //     var name = '홍길동';
+        //     return function(aaa){
+        //         name = aaa;
+        //         console.log(name);
+        //     }
+        // }
+        // var setObj = obj();
+        // setObj('이순신');
+
+
+        //Getter Setter 혼용
+        function obj() {
+            var name = '홍길동';
+
+            return {
+                getName : function() {
+                    return name;
+                },
+                setName : function(aaa){
+                    name = aaa;
+                }
+            }
+        }
+
+        var result = obj();                 //obj반환
+        result.setName('이순신');           //setter
+        console.log( result.getName() );    //getter
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
