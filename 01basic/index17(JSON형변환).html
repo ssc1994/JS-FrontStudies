@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json형변환</title>
+</head>
+<body>
+
+    <script>
+
+        var data = [
+                    { id : 'aaa123', title : 'aaa', content : '...'},
+                    { id : 'bbb123', title : 'bbb', content : '...'},
+                    { id : 'ccc123', title : 'ccc', content : '...'},
+        ];
+
+        // console.log(data);
+        //JS객체를 JSON문자열로 형변환
+        var str = JSON.stringify(data);
+        console.log(str)
+
+
+        //JSON문자열을 JS객체로 혀변환
+        var obj = JSON.parse(str);
+        console.log(obj);
+
+        //단 문자열을 객체로 변경할때는 엄격한 규칙이 있다.
+        //key, value가 ""처리여야 한다.
+        // JSON.parse("{'키':'aaa123'}");          //에러
+        var result = JSON.parse('{"키":"aaa123"}');              //규칙 통과
+        console.log(result)
+
+    </script>
+    
+</body>
+</html>
