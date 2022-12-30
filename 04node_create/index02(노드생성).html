@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <input type="text" class="todo" placeholder="할일을 작성해 보세요">
+    <button class="btn">추가</button>
+
+    <ul class="list">
+
+    </ul>
+
+    <script>
+        var btn = document.querySelector(".btn");
+        var todo = document.querySelector(".todo");
+        var list = document.querySelector(".list");
+
+        btn.onclick = function(){
+            var li = document.createElement("li");  //li태그 생성
+            var a = document.createElement("a" );   //a태그 생성
+            a.href= "#";
+            a.style.textDecoration="none";
+            a.innerHTML = todo.value;
+
+            todo.value = "";        //입력칸 초기화
+
+            li.appendChild(a);      //li의 자식으로 a를 넣는다.
+            list.appendChild(li);   //list의 자식으로 li를 넣는다.
+
+            // var li = '<li><a href="#">' + todo.value + '</a></li>';
+            // list.innerHTML+=li;
+        }
+    </script>
+
+
+    <hr>
+
+    <div id="addList">
+
+    </div>
+    <button id="add">추가</button>
+
+    <script>
+        var btn = document.getElementById("add");
+        window.onload = function(){
+            var addList = document.getElementById("addList");
+            var ul = document.createElement("ul");
+
+
+            for(var i =1 ; i<=10 ; i++){
+                var li = document.createElement("li");
+                li.innerHTML = "리스트" + i;
+                ul.appendChild(li);
+            }
+            addList.appendChild(ul);
+        }
+        btn.onclick = function(){
+            var li = document.createElement("li");
+            li.innerHTML = "추가된리스트";
+            document.querySelector("#addList > ul").appendChild(li);
+
+        }
+    </script>
+
+
+</body>
+</html>
