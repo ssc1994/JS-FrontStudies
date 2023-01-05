@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 30px;
+            font-style: bold;
+            font-weight: 900;
+            color: rgb(10, 10, 10);
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="start">시작</button>
+    <button class="stop">멈춰</button>
+    <div class="cur"> </div>
+
+    <script>
+        //일정주기마다 동작
+        var time = window.setInterval(func1, 1000);
+        function func1() {
+            var date = new Date();              
+            var hour = parseInt(date.getHours());         
+            var minutes = parseInt(date.getMinutes());    
+            var second = parseInt(date.getSeconds());     
+
+            var over = 60;
+            if ((18 - parseInt(hour)) == 0) over = 50;
+            var cur = document.querySelector(".cur");
+            var green=Math.round(Math.random()*250);
+            var red=Math.round(Math.random()*250);
+            var blue=Math.round(Math.random()*250);
+            cur.style.color="RGB(+"+red+","+green+","+blue+")"
+
+            cur.innerHTML = (18 - hour) + "시간 " + (over - minutes) + "분 " + (60 - second) + "초";
+        }
+        
+        var start = document.querySelector(".start");
+        start.onclick = function(){
+            time = window.setInterval(func1, 1000);
+        }
+        
+        var stop = document.querySelector(".stop");
+        stop.onclick = function(){
+            //인터벌 중지
+            window.clearInterval(time);
+        }
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

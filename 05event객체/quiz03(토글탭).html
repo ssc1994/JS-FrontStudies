@@ -20,7 +20,23 @@
         }
         .active {
             display: block;
+            animation: fadeIn 0.5s ease-in-out;
         }
+
+        /* 애니메이션 */
+        @keyframes fadeIn{
+            from{
+                opacity:0;
+                background-color: aqua;
+                margin-left: -100px;
+            } to{
+                opacity: 1;
+                background-color: aquamarine;
+                margin-left: 0;
+            }
+        }
+
+
     </style>
 </head>
 
@@ -52,10 +68,12 @@
         var toggle = document.querySelector(".toggle");
         toggle.onclick = function(){
             if(event.target.tagName != "LI") return;
-            var toggleMenu = document.querySelectorAll(".toggle-menu");
-            for(var i = 0 ; i<toggleMenu.length ; i++){
-                if(toggleMenu[i].classList.contains("active")) toggleMenu[i].classList.remove("active");
-            }
+            var active = document.querySelector(".active");
+            active.classList.remove("active");
+            // var toggleMenu = document.querySelectorAll(".toggle-menu");
+            // for(var i = 0 ; i<toggleMenu.length ; i++){
+            //     if(toggleMenu[i].classList.contains("active")) toggleMenu[i].classList.remove("active");
+            // }
             var tog = document.querySelector(event.target.dataset.id);
             tog.classList.add("active");
         }

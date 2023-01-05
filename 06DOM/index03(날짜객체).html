@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="time"></div>
+
+    <script>
+        var date = new Date();  //현재시간 
+        console.log(date);
+        var date = new Date(2023, 0, 4);    //년월일(월은0부터)
+        console.log(date);
+        var date = new Date(2023, 0, 4, 14, 22, 0); //년월일시분초
+        console.log(date);
+
+        //날짜의 포멧형식 변환 함수
+        console.log(date.toUTCString());
+        console.log(date.toLocaleTimeString());
+        console.log(date.toISOString());
+
+        //년 월 일 을 얻는 getter
+        var milis = date.getTime();
+        console.log(milis); //1970.01.01~현재까지의 시간을 밀리초로 출력
+
+        var date = new Date();  //현재시간
+        var year = date.getFullYear();  //년
+        var month = date.getMonth() + 1;    //월 0부터시작이라 +1
+        var day = date.getDay();        //일
+
+        var hour = date.getHours();     //시간
+        var minutes = date.getMinutes();    //분
+        var second = date.getSeconds();     //초
+
+        console.log(year + "년 " + month + "월 " + day + "일 " + hour + "시 " + minutes + "분 " + second + "초")
+    </script>
+
+
+
+</body>
+
+</html>
