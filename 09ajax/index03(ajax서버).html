@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <select class="lists">
+        <option >1</option>
+        <option >5</option>
+        <option >10</option>
+    </select>
+    <ul class="pageNation">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+
+    <script>
+
+        var page = 1;
+        var list = 1;
+        
+        
+        var pageNation = document.querySelector(".pageNation");
+        pageNation.onclick = function (e) {
+            var lists = document.querySelector(".lists");
+            if (e.target.tagName != "LI") return;
+            list = lists.value;
+            page = e.target.innerHTML;
+            ajax();
+        }
+        
+        //IxONcjfs6wc1hi5EUDKqUQfuvJ9%2B8kJ2QYxK1XXYm%2B%2FJsE5yIfdbfA12fHmbNu6YMYfoi1cd%2FTIppcx%2FllL9sQ%3D%3D
+        var key = "IxONcjfs6wc1hi5EUDKqUQfuvJ9%2B8kJ2QYxK1XXYm%2B%2FJsE5yIfdbfA12fHmbNu6YMYfoi1cd%2FTIppcx%2FllL9sQ%3D%3D"
+        var url = "http://apis.data.go.kr/1360000/TourStnInfoService/getTourStnVilageFcst?serviceKey=" + key + "&pageNo=" + page + "1&numOfRows=" + list + "&CURRENT_DATE=2023010510&HOUR=24&COURSE_ID=1&dataType=JSON"
+
+        function ajax() {
+
+
+            fetch(url)
+                .then(function (res) {
+                    return res.json();
+                })
+                .then(function (data) {
+                    // console.log(data.response.body.items.item);
+                    var arr = data.response.body.items.item;
+                    for (var i = 0; i < arr.length; i++) {
+                        console.log(arr[i]);
+                    }
+                })
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //xml형식용
+        // var result = new DOMParser().parseFromString(data,'text/xml');
+            // var arr = result.querySelectorAll("items > item");
+            // for(var i = 0 ; i< arr.length; i++){
+            //         console.log("=================="+(i+1)+"번")
+            //         console.log(arr[i].querySelector("tm").innerHTML);
+            //         console.log(arr[i].querySelector("thema").innerHTML);
+            //         console.log(arr[i].querySelector("courseId").innerHTML);
+            //         console.log(arr[i].querySelector("courseAreaId").innerHTML);
+            //         console.log(arr[i].querySelector("courseAreaName").innerHTML);
+            //         console.log(arr[i].querySelector("courseName").innerHTML);
+            //         console.log(arr[i].querySelector("spotAreaId").innerHTML);
+            //         console.log(arr[i].querySelector("spotAreaName").innerHTML);
+            //         console.log(arr[i].querySelector("spotName").innerHTML);
+            //         console.log(arr[i].querySelector("th3").innerHTML);
+            //         console.log(arr[i].querySelector("wd").innerHTML);
+            //         console.log(arr[i].querySelector("ws").innerHTML);
+            //         console.log(arr[i].querySelector("sky").innerHTML);
+            //         console.log(arr[i].querySelector("rhm").innerHTML);
+            //         console.log(arr[i].querySelector("pop").innerHTML);
+            //     }
+    </script>
+
+</body>
+
+</html>
