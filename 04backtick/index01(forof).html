@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    let arr = ["a","b","c"];
+
+    // for(let i in arr){
+    //     console.log(i)   //index
+    // }
+
+    for (let i of arr){
+        console.log(i)      //값
+    }
+
+    for ( let i of "hello World"){
+        console.log(i);
+    }
+
+    let person = [
+        {id:"aaa", age : 10},
+        {id:"bbb", age : 20}
+    ]
+    //구조분해할당
+    for (let {id,age} of person){
+        console.log(id, age)
+    }
+
+    //객체를 반복할순 없음
+    // let obj = {a:1, b:2};
+    // for(let i of obj){}
+
+</script>
+
+    
+</body>
+</html>

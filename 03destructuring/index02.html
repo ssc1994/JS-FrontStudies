@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // let obj = {name :"홍길동", age:20};
+
+        // /*기존에 가져오던 방법
+        // console.log(obj.name);
+        // console.log(obj["name"]); */
+        // let {name, age} = obj;
+        // console.log(name, age); //홍길동 20
+
+        // let {...arr} = obj;
+        // console.log(arr)        //{name: '홍길동', age: 20}
+
+        let person = {
+            name : "홍길동",
+            age : 30,
+            job : ["js", "css"],
+            info : {id : "aa123"}
+        };
+        // let {name, job} = person;
+        // console.log(name, job)
+
+        // let {name, job, info} = person;
+        // console.log(name);
+        // console.log(job);
+        // console.log(info);
+
+        //객체의 값을 다른 이름으로 가지고 나오기
+        let {name:aaa} = person;        //name을 aaa이름으로 가지고 나옴
+        console.log(aaa)
+
+        let {name: bbb, job: jjj} = person;
+        console.log(bbb, jjj)
+    </script>
+
+</body>
+</html>
