@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="ajax()">JSON파일 AJAX요청</button>
+    <div class="result"></div>
+    
+    <script>
+        
+        function ajax(){
+            fetch("hi.json")
+            .then(function(res){
+                return res.json()
+            })
+            .then(function(data){
+                // console.log(data);
+                // console.log(data.id);           //바로접근
+                // console.log(data["id"]);        //["키"]로 접근
+                var result = document.querySelector(".result")
+                result.innerHTML = data.id;
+            })
+        }
+
+    </script>
+
+    <button onclick="ajax2()">XML데이터 AJAX요청</button>
+    <script>
+        function ajax2(){
+            fetch("hi.xml")
+            .then(function (response){
+               return response.text();
+            })
+            .then(function(data){
+                var result1 = new DOMParser().parseFromString(data,'text/xml');
+                var arr = result1.querySelectorAll("datas > data");
+                for(var i = 0 ; i< arr.length; i++){
+                    console.log(arr[i].querySelector("name").innerHTML);
+                    console.log(arr[i].querySelector("version").innerHTML);
+                    console.log(arr[i].querySelector("price").innerHTML);
+                    console.log("==================")
+                }
+            })
+        }
+    </script>
+
+
+</body>
+</html>

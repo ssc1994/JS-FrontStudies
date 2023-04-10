@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        console.log(navigator)
+        var userAgent = navigator.userAgent.toLocaleLowerCase();
+        console.log(userAgent) 
+        if(userAgent.lastIndexOf("chrome")){
+            console.log("크롬");
+        }else if(userAgent.lastIndexOf("firefox")){
+            console.log("파폭");
+        }else if(userAgent.lastIndexOf("whale")){
+            console.log("웨일");
+        }
+    </script>
+
+
+    
+</body>
+</html>

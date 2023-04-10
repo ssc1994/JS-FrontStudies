@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            disable
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>네이버 타이머 도전하기</h3>
+
+    select태그는 시간:99 or 분:60 or 초:60으로 화면이 생성될 때 엘리먼트 생성기법으로 처리합니다.<br>
+    시간설정 버튼을 클릭하면 시간이 세팅됩니다.<br>
+    타이머시작버튼은 토글형태로 타이머가 동작중이라면 일시정지 버튼으로 활성화 됩니다<br>
+    사용자가 버튼을 잘못클릭하는 경우를 고려하여, 어떠한 경우라도 중복으로 타이밍이 발생되면 안됩니다.<br>
+
+    <h3>시간을 선택하세요</h3>
+    <select class="hr"></select>
+    <select class="min"></select>
+    <select class="sec"></select>
+
+    <button type="button" id="timeBtn">시간설정</button>
+    <button type="button" id="startBtn" disabled>타이머시작</button>
+
+    <h3 class="time"></h3>
+    <script>
+        //시간설정
+        var hr = document.querySelector(".hr");
+        for (var i = 00; i < 100; i++) {
+            var option = document.createElement("option");
+            option.innerHTML = i;
+            hr.appendChild(option)
+        }
+        var min = document.querySelector(".min");
+        for (var i = 0; i < 60; i++) {
+            var option = document.createElement("option");
+            option.innerHTML = i;
+            min.appendChild(option)
+        }
+        var sec = document.querySelector(".sec");
+        for (var i = 0; i < 60; i++) {
+            var option = document.createElement("option");
+            option.innerHTML = i;
+            sec.appendChild(option)
+        }
+        var timeBtn = document.getElementById("timeBtn");
+        var startBtn = document.getElementById("startBtn");
+        var time = document.querySelector(".time");
+        //시간설정 버튼
+        var hour;
+        var minutes;
+        var second;
+        timeBtn.onclick = function () {
+            time.innerHTML = hr.value + " : " + min.value + " : " + sec.value;
+            startBtn.disabled = false;
+        }
+        function func1() {
+            time = document.querySelector(".time");
+            var date1 = new Date();
+            var hour1 = parseInt(date1.getHours());
+            var minutes1 = parseInt(date1.getMinutes());
+            var second1 = parseInt(date1.getSeconds());
+            var lHour = (parseInt(hr.value) + hour) - hour1;
+            var lMinutes = (parseInt(min.value) + minutes) - minutes1;
+            var lSecond = (parseInt(sec.value) + second) - second1;
+
+            if (lSecond < 0) {
+                if (lHour > 0) {
+                    if (lMinutes > 0) {
+                        lMinutes -= 1;
+                        lSecond += 60;
+                    } else if (lMinutes < 1) {
+                        lHour -= 1;
+                        lMinutes += 59;
+                        lSecond += 60;
+                    }
+                } else {
+                    if (lMinutes > 0) {
+                        lMinutes -= 1;
+                        lSecond += 60;
+                    } else if (lMinutes <= 0) {
+                        window.clearInterval(clock);
+                        timeBtn.disabled = false;
+                        startBtn.innerHTML = "타이머시작"
+                        alert('끝');
+                        return;
+                    }
+                }
+            }
+            time.innerHTML = lHour + " :  " + lMinutes + " : " + lSecond + "";
+        }
+        var clock;
+        startBtn.onclick = function () {
+            var date = new Date();
+            hour = parseInt(date.getHours());
+            minutes = parseInt(date.getMinutes());
+            second = parseInt(date.getSeconds());
+            if (startBtn.innerHTML == "타이머시작") {
+                clock = window.setInterval(func1, 1000);
+                timeBtn.disabled = true;
+                startBtn.innerHTML = "일시정지"
+            } else if (startBtn.innerHTML == "일시정지") {
+                window.clearInterval(clock);
+                timeBtn.disabled = false;
+                startBtn.innerHTML = "타이머시작"
+
+            }
+        }
+    </script>
+</body>
+
+</html>
