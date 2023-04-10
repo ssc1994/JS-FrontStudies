@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        //JSON형식에서 디스트럭쳐링
+        let list = [
+            {num : 1, title : "hello", info : [1,2,3], profile : {birth : "2023"}},
+            {num : 2, title : "bye", info : [4,5,6], profile : {birth : "2022"}}
+        ];
+
+        let [a,b]= list;
+
+        //두번째 객체의 num, title
+        let[,{num,title}] = list;
+        console.log(num,title);     //2 'bye'
+
+        //두번째 객체의 info
+        let[,{info}] = list;
+        console.log(info);      //[4,5,6]
+
+        //두번째 객체의 profile
+        let[,{profile}] = list;
+        console.log(profile)        //{birth : '2022'}
+        
+        //두번째 객체의 info를 다른이름으로 가지고 나오기
+        let[,{info: x}]= list;
+        console.log(x)
+
+        //두번째 객체의 info배열의 첫번째 요소
+        let [,{info: [y]}] = list
+        console.log(y)              //4
+
+        //두번째 객체의 profile 안에 있는 birth값을 year로 저장
+        let [, {profile:{birth: year}}] = list;
+        console.log(year)          //2022
+
+        //
+
+    </script>
+    
+</body>
+</html>
