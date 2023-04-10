@@ -1,0 +1,79 @@
+*{margin: 0; padding: 0; list-style: none;box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif;}
+img{max-width: 100%; height: auto;}
+.btn{border-radius: 0;}
+.detail{
+    min-height: 345px;
+}
+
+.detail .detail-info{
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.detail .price{
+    margin: 0 0 10px;
+    font-size: 30px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+.detail .delivery{
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #777;
+}
+.detail-price{
+    overflow: hidden;
+}
+.detail-price .left{ float: left; line-height: 29px;height: 29px;}
+.detail-price .right{float: right; font-size: 20px; font-weight: bold;height: 29px;}
+
+.detail-btn{overflow: hidden;}
+.detail-btn .left{float: left; width: 50%;height: 60px;font-size: 18px;}
+.detail-btn .right{float: right; width: 50%;height: 60px;font-size: 18px;}
+
+.reply_wrap{
+    background-color: #f5f5f5;
+    padding: 15px;
+    border: 1px solid #ddd;
+    position: relative;
+}
+.reply_wrap img{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+.reply_wrap .reply_cont{
+    padding-left: 60px;
+}
+.reply_group{
+    overflow: hidden;
+}
+.form-control{
+    margin-bottom: 10px;
+}
+
+.reply_input{
+    float: left;
+}
+.reply_input input{
+    width: 200px;
+    margin-bottom: 5px;
+}
+.reply_btn{
+    float: right;
+}
+.reply_group Strong{
+    float: left;
+}
+.reply_group small{
+    float: left;
+    margin-left: 10px;
+    height: 20px;
+    line-height: 20px;
+}
+.reply_group a{
+    float: right;
+    color: #777;
+    text-decoration: none;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            background-color: yellow;
+            padding: 10px;
+            height: 300px;
+        }
+
+        .box .item {
+            background-color: green;
+            width: 50px;
+            border: 1px solid #999;
+            height: 100px;
+        }
+        /* grow / shrink 컨테이너 사이즈가 변할때 아이템이 증가되거나 감소되는 비율(속도) 
+        (숫자가 크면 클수록 빠르게 감소하고 증가함) */
+        /* basis 아이템 너비에 대한 비율(기본값은  auto이며 , 없으면 width 를 따라감) */
+
+        .item1 {
+            /* flex-grow: 2;
+            flex-shrink: 2;
+            flex-basis: 33.3333%; */
+            flex: 2 2 33.3333%;
+            order: 10;
+        }
+
+        .item2 {
+            /* flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 33.3333%; */
+            flex: 0 0 33.3333%;
+            order: 1;
+        }
+
+        .item3 {
+            /* flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 33.3333%; */
+            flex: 4 4 33.3333%;
+            order: 5;
+
+
+            align-self: center;
+        }
+
+        .container {
+            display: flex;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+    <h3 style="text-align: center;">align-items(교차축정렬 - 두줄일때)</h3>
+
+    <div class="container box">
+
+        <div class="item item1">hello1</div>
+        <div class="item item2">hello2</div>
+        <div class="item item3">hello3</div>
+    </div>
+
+</body>
+
+</html>

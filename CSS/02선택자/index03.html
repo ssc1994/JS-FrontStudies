@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    /* 마우스 닿을 때 */
+    .list > ul > li > a:hover{ background-color: aqua; font-size: xx-large; }
+
+    /* 선택 되었을 때 */
+    .inner input[type=text]:focus { background-color: aqua ;}
+
+    /* 활성화 되었을 때 */
+    .title p:active{background-color: aqua; font-size: 200%;}
+
+    </style>
+</head>
+<body>
+
+    <div class="list">
+        <ul>
+            <li><a href="#">목록</a></li>
+            <li><a href="#">목록</a></li>
+            <li><a href="#">목록</a></li>
+        </ul>
+    </div>
+
+
+    <div class="inner">
+        <input type="text"><br>
+        <input type="text">
+    </div>
+
+    <div class="title">
+        <p>active</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .inner1 {
+            height: 200px;
+            background-color: yellow;
+        }
+
+        .inner2 {
+            background-color: red;
+            position: sticky;
+            top: 0px;
+        }
+
+        .inner21 {
+            background-color: red;
+            position: sticky;
+            top: 21px;
+            /* 
+            1. skicky 는 top bottom left right 중 필수적으로 하나를 설정해야 한다 
+            2. 부모태그에 overflow 속성이 있다면 동작이 안됨
+            3. top속성에 fixed되는 지점을 기록하면 된다
+            */
+        }
+
+        .inner22 {
+            background-color: red;
+            position: sticky;
+            top: 42px;
+        }
+
+        .inner3 {
+            height: 1000px;
+            background-color: green;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <div class="inner1">
+            내용
+        </div>
+        <aside class="inner2">
+            sticky는 특정높이 전까지는 고정으로 있다가, 특정 높이에 도달하면 fix로 바뀜
+        </aside>
+        <div class="inner3">
+            내용
+        </div>
+        <aside class="inner21">
+            sticky는 특정높이 전까지는 고정으로 있다가, 특정 높이에 도달하면 fix로 바뀜
+        </aside>
+        <div class="inner3">
+            내용
+        </div>
+        <aside class="inner22">
+            sticky는 특정높이 전까지는 고정으로 있다가, 특정 높이에 도달하면 fix로 바뀜
+        </aside>
+        <div class="inner3">
+            내용
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>

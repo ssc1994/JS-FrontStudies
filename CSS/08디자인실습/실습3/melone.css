@@ -1,0 +1,554 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#header {
+    border-top: 3px solid #00d344;
+}
+
+#header .wrap {
+    border-bottom: 1px solid #999;
+}
+
+#header .wrap .top {
+    font-size: 13px;
+    width: 1008px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#header .wrap .top .top_left {
+    float: left;
+    padding: 11px 7px;
+    color: #999;
+}
+
+#header .wrap .top .top_right {
+    float: right;
+}
+
+#header .wrap .top .top_right ul li {
+    display: inline;
+    box-sizing: border-box;
+    border-left: 1px solid #999;
+}
+
+#header .wrap .top .top_right ul li a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    color: #999;
+    padding: 11px 7px;
+}
+
+
+#header .wrap .mid {
+    width: 1008px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#header .wrap .mid .left {
+    float: left;
+    animation-delay: 1s;
+}
+
+#header .wrap .mid .right {
+    float: right;
+}
+
+#header .wrap .mid fieldset {
+    width: 330px;
+    height: 40px;
+    float: left;
+    overflow: hidden;
+    border: none;
+    margin: 36px 0 0 11px;
+    background-image: url('img/melon_search.png');
+}
+
+#header .wrap .mid fieldset input {
+    margin: 7px 0 0 18px;
+    float: left;
+    height: 25px;
+    width: 260px;
+    box-sizing: border-box;
+    border: none;
+}
+
+#header .wrap .mid fieldset button {
+    float: right;
+    background-image: url('img/melon_btn.png');
+    width: 45px;
+    height: 40px;
+    border: 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#header .wrap .bot {
+    width: 1008px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#header .wrap .bot ul {
+    float: left;
+}
+
+#header .wrap .bot ul li {
+    float: left;
+    display: inline;
+}
+
+#header .wrap .bot ul li a,
+#header .wrap .bot .mymusic a {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+    width: 75px;
+    height: 40px;
+    text-align: center;
+
+}
+
+#header .wrap .bot ul li a:hover,
+#header .wrap .bot .mymusic a:hover {
+    color: green;
+}
+
+#header .wrap .bot .mymusic {
+    float: right;
+}
+
+section .wrap {
+    width: 1008px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+section .wrap h6 {
+    margin-top: 30px;
+    padding-left: 7px;
+}
+
+section .wrap .firstline {
+    overflow: hidden;
+}
+
+section .wrap .firstline .alb {
+    float: left;
+    width: 480px;
+    box-sizing: border-box;
+}
+
+section .wrap .firstline .alb ul {
+    display: inline;
+    overflow: hidden;
+}
+
+section .wrap .firstline .alb ul li {
+    float: left;
+    width: 33.3333%;
+    position: relative;
+}
+
+/* ------------------앨범목록 hover  */
+section .wrap .firstline .alb ul li:hover .hover_cont {
+    opacity: 1
+}
+
+section .wrap .firstline .alb ul li .hover_cont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 156px;
+    height: 156px;
+    background-color: rgb(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+    z-index: 10;
+}
+
+section .wrap .firstline .alb ul li .hover_cont a {
+    color: #fff;
+    position: absolute;
+    width: 118px;
+    height: 18px;
+    top: 60px;
+    left: 19px;
+}
+
+section .wrap .firstline .alb ul li a {
+    display: inline-block;
+    position: relative;
+}
+
+section .wrap .firstline .alb ul li a .singer {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    z-index: 9;
+}
+
+section .wrap .firstline .slide_wrap {
+    float: left;
+    width: 236px;
+    margin-left: 4px;
+}
+
+section .wrap .firstline .user_wrap {
+    width: 280px;
+    float: left;
+    margin-left: 8px;
+}
+
+section .wrap .firstline .user_wrap .login_wrap {
+    background-color: #fbfbfb;
+    height: 115px;
+    border: 1px solid #e0e0e0;
+    padding: 0 17px;
+    text-align: center;
+}
+
+section .wrap .firstline .user_wrap .login_wrap .top {
+    padding: 24px 0 15px 0;
+}
+
+section .wrap .firstline .user_wrap .login_wrap .top .left {
+    font-size: 11px;
+    color: #939393;
+    float: left;
+}
+
+section .wrap .firstline .user_wrap .login_wrap .top .right {
+    font-size: 11px;
+    color: #939393;
+    float: right;
+}
+
+section .wrap .firstline .user_wrap .login_wrap .top .right a {
+    font-size: 11px;
+    color: #939393;
+}
+
+section .wrap .firstline .user_wrap .login_wrap button {
+    background: #00d344;
+    width: 100%;
+    height: 42px;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+section .wrap .promo_wrap {
+    margin-top: 10px;
+}
+
+section .wrap .main_banner {
+    margin-top: 20px;
+}
+
+section .wrap .main_banner img {
+    width: 100%;
+    height: auto;
+}
+
+/* --------------------------------핫이슈 */
+section .wrap .hot_issue {
+    float: left;
+    width: 704px;
+    margin-top: 20px;
+}
+
+section .wrap .hot_issue h4 {
+    padding: 5px 0;
+    border-bottom: 1px solid #999;
+}
+
+section .wrap .hot_issue h4 span {
+    font-size: 9px;
+    color: #999;
+}
+
+section .wrap .hot_issue ul {
+    overflow: hidden;
+}
+
+section .wrap .hot_issue ul li {
+    float: left;
+    margin: 16px 0 0 16px;
+}
+
+section .wrap .hot_issue ul .issue1 {
+    float: left;
+    margin-left: 0;
+}
+
+section .wrap .hot_issue .inner .title {
+    display: block;
+    font-size: 15px;
+    color: #000;
+}
+
+section .wrap .hot_issue .inner .cont {
+    display: block;
+    font-size: 10px;
+    color: #777;
+}
+
+section .wrap .hot_issue .inner .hit {
+    display: block;
+    font-size: 10px;
+    color: green;
+}
+
+section .wrap .hot_issue .inner .hit span {
+    font-size: 10px;
+    color: #777;
+}
+
+/* --------------------------------차트 */
+
+section .wrap .chart {
+    width: 280px;
+    float: left;
+    margin-left: 24px;
+    height: 472px;
+    margin-top: 20px;
+}
+
+section .wrap .chart h4 {
+    padding: 5px 0;
+    border-bottom: 1px solid #999;
+}
+
+section .wrap .chart .chart_wrap {
+    border: 1px solid #999;
+    margin-top: 16px;
+}
+
+section .wrap .chart .chart_top {
+    overflow: hidden;
+
+}
+
+section .wrap .chart .chart_top a {
+    display: block;
+    float: left;
+    width: 33.3333%;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+    color: #999;
+}
+
+section .wrap .chart .chart_top li .top {
+    border-top: 2px solid green;
+}
+
+section .wrap .chart .chart_rank {
+    border: 1px solid #999;
+    overflow: hidden;
+}
+
+section .wrap .chart .chart_rank li {
+    height: 33px;
+    border-top: 1px solid #999;
+    width: 278px;
+    overflow: hidden;
+}
+
+section .wrap .chart .chart_rank li .rank_num {
+    float: left;
+    width: 34px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 3px 0 0 8px;
+}
+
+section .wrap .chart .chart_rank li .rank_cnt {
+    float: left;
+    width: 22px;
+    font-size: 11px;
+    margin: 8px 0 0 8px;
+}
+
+section .wrap .chart .chart_rank li .thumb {
+    float: left;
+    margin: 3px 0 0 8px;
+}
+
+section .wrap .chart .chart_rank li .thumb img {
+    display: none;
+}
+
+section .wrap .chart .chart_rank .thumb .rank_info .rank_name a {
+    color: #000;
+}
+
+section .wrap .chart .chart_rank .thumb .rank_info .rank_cont a {
+    color: #777;
+}
+
+
+
+/* hover */
+
+section .wrap .chart .chart_rank :hover {
+    height: 66px;
+}
+
+section .wrap .chart .chart_rank li:hover .rank_num {
+    margin-top: 20px;
+}
+
+section .wrap .chart .chart_rank li:hover .rank_cnt {
+    margin-top: 25px;
+}
+
+section .wrap .chart .chart_rank li:hover .thumb {
+    padding: 13px 0 0 60px;
+    position: relative;
+    margin: 3px 0 0 8px;
+}
+
+section .wrap .chart .chart_rank li:hover .thumb img {
+    display: inline;
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+
+section .wrap .chart .chart_rank li:hover .thumb .rank_info a{
+    display: block;
+}
+
+
+/* on */
+
+section .wrap .chart .chart_rank .on {
+    height: 66px;
+}
+
+section .wrap .chart .chart_rank .on .rank_num {
+    float: left;
+    width: 34px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 3px 0 0 8px;
+    margin-top: 20px;
+}
+
+section .wrap .chart .chart_rank .on .rank_cnt {
+    float: left;
+    width: 22px;
+    font-size: 11px;
+    margin: 8px 0 0 8px;
+    margin-top: 25px;
+}
+
+section .wrap .chart .chart_rank .on .thumb {
+    float: left;
+    padding: 13px 0 0 60px;
+    position: relative;
+    margin: 3px 0 0 8px;
+}
+
+section .wrap .chart .chart_rank .on .thumb img {
+    display: inline;
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+
+section .wrap .chart .chart_rank .on .thumb .rank_info .rank_name a {
+    display: block;
+}
+
+section .wrap .chart .chart_rank .on .thumb .rank_info .rank_cont a {
+    display: block;
+}
+
+#footer .footer_wrap{
+border-top: 1px solid #999;
+}
+#footer .footer_wrap .footer_top{
+    width: 1008px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#footer .footer_wrap .footer_top .footer_right{
+    float: right;
+}
+#footer .footer_wrap .footer_top .footer_right li{
+    display: inline;
+}
+#footer .footer_wrap .footer_top .footer_right li a{
+    font-size: 12px;
+    color: #777;
+    margin-left: 10px;
+    padding-left: 10px;
+    display: inline-block;
+    font-weight: 900;
+}
+#footer .footer_wrap2{
+border-top: 1px solid #ddd;
+}
+#footer .footer_wrap2 .footer_bot{
+    width: 1008px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#footer .footer_wrap2 .footer_bot .footer_left{
+    margin-top: 10px;
+}
+#footer .footer_wrap2 .footer_bot .footer_left li{
+    display: inline;
+}
+#footer .footer_wrap2 .footer_bot .footer_left li a{
+    display: inline-block;
+    font-size: 10px;
+    color: #777;
+    margin-left: 10px;
+    border-right: 1px solid #777;
+    padding-right: 5px;
+    height: 10px;
+    line-height: 10px;
+}
+#footer .footer_wrap2 .footer_bot p{
+    margin: 20px 0 50px 0;
+}
+#footer .footer_wrap2 .footer_bot > p > strong{
+    font-size: 12px;
+}
+#footer .footer_wrap2 .footer_bot > p > span{
+    font-size: 10px;
+    color: #777;
+}

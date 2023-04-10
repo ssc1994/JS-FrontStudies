@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        section {
+            height: 2000px;
+            background-color: aqua;
+            margin-top: 150px;
+            /* background-image: url('img/fish.png'); */
+
+        }
+
+        header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background-color: #fff;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .menu {
+            overflow: hidden;
+        }
+
+        .menu ul {
+            background-color: #000;
+        }
+
+        .menu ul li {
+            display: inline;
+        }
+
+        .menu ul li a {
+            display: inline-block;
+            color: #777;
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .side {
+            position: fixed;
+            top: 200px;
+            right: 0;
+            background-color: #282828;
+            z-index: 10;
+            text-align: center;
+        }
+
+
+        .side ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 15px;
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            width: 100px;
+            border-top: 1px solid #777;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <div>
+            <img src="img/fish.png" alt="">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside class="side">
+        <ul>
+            <li><a href="#">카톡</a></li>
+            <li><a href="#">전화번호</a></li>
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+        </ul>
+    </aside>
+
+    <section>
+        내용
+    </section>
+
+
+</body>
+
+</html>

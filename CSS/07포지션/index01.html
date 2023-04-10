@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .list {
+            width: 50%;
+            margin: 0 auto;
+            border: 1px solid #000;
+        }
+        p{
+            height: 100px;
+        }
+        .content{
+            position: relative;
+        }
+        .item1{background-color: aqua;}
+        .item2{background-color: red;
+            /*position absolute 를 적용하면 부모에 relative가 들어감. 들어가지않으면 위치가 body기준이 됨*/
+            position: absolute; /* body 기준으로 올라감 */
+            /* 포지션을 적용하면 top, .bottom 중 한개 / left, right 중 한개를 선택해서 위치조정 */
+            top:20px;       /*위치조정*/
+            left: 50px;
+            width: 50px;    /*크기조정*/
+            height: 50px;
+            }
+        .item3{background-color: yellow;}
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="list">
+        <div class="content">
+            <p class="item1">포지션</p>
+            <p class="item2">포지션</p>
+            <p class="item3">포지션</p>
+            <p class="item3">포지션</p>
+            <p class="item3">포지션</p>
+            <p class="item3">포지션</p>
+            <p class="item3">포지션</p>
+            <p class="item3">포지션</p>
+            <p class="item3">포지션</p>
+            <p class="item3">포지션</p>
+            <p class="item3">포지션</p>
+            <p class="item3">포지션</p>
+            <p class="item3">포지션</p>
+            <p class="item3">포지션</p>
+            <p class="item3">포지션</p>
+            <p class="item3">포지션</p>
+            <p class="item3">포지션</p>
+            <p class="item3">포지션</p>
+            <p class="item3">포지션</p>
+            <p class="item3">포지션</p>
+            <p class="item3">포지션</p>
+            <p class="item3">포지션</p>
+            
+        </div>
+    </div>
+
+
+</body>
+
+</html>
